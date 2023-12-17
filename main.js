@@ -419,3 +419,238 @@
 // String 22
 
 
+// function boshlanuvchiTugovchiSozlar(matn) {
+//     var sozlar = matn.split(" ");
+
+//     var boshlanuvchilar = [];
+//     var tugovchilar = [];
+
+//     for (var i = 0; i < sozlar.length; i++) {
+//         var soz = sozlar[i];
+
+//         var tozalanganSoz = soz.replace(/\s+/g, '');
+
+//         if (tozalanganSoz !== '') {
+//             var boshHarf = tozalanganSoz[0];
+//             var tugHarf = tozalanganSoz[tozalanganSoz.length - 1];
+
+//             if (boshHarf === tugHarf ) {
+//                 boshlanuvchilar.push(soz);
+//             }
+
+//             if (boshHarf !== tugHarf) {
+//                 tugovchilar.push(soz);
+//             }
+//         }
+//     }
+
+//     return {
+//         boshlanuvchilar: boshlanuvchilar,
+//         tugovchilar: tugovchilar
+//     };
+// }
+
+// var matn = "Salom dunyo. Sog'liqni saqlang. Bobo";
+// var natija = boshlanuvchiTugovchiSozlar(matn);
+
+// console.log("Boshlanuvchi so'zlar:", natija.boshlanuvchilar);
+// console.log("Tugovchi so'zlar:", natija.tugovchilar);
+
+
+
+
+
+// String 23
+
+
+
+// function findWordsWithTwoAs(str) {
+//     var sozlar = str.split(" ");
+
+//     var a2Sozlar = [];
+
+//     for (var i = 0; i < sozlar.length; i++) {
+//         var soz = sozlar[i];
+
+//         var aHarflar = 0;
+//         for (var j = 0; j < soz.length; j++) {
+//             if (soz[j].toUpperCase() === 'A') {
+//                 aHarflar++;
+//             }
+//         }
+
+//         if (aHarflar === 2) {
+//             a2Sozlar.push(soz);
+//         }
+//     }
+
+//     return a2Sozlar;
+// }
+
+// var satr = "Salom dunyo. Alisher Anvar. Andijon Arslon";
+// var a2Sozlar = findWordsWithTwoAs(satr);
+
+// console.log("2 ta 'A' harfi bor so'zlar:", a2Sozlar);
+
+
+
+
+// String 24
+
+
+
+// function getMaxOfString(str) {
+//     var sozlar = str.split(" ");
+
+//     var engUzunSoz = "";
+//     for (var i = 0; i < sozlar.length; i++) {
+//         var soz = sozlar[i];
+
+//         if (soz.length > engUzunSoz.length) {
+//             engUzunSoz = soz;
+//         }
+//     }
+
+//     return engUzunSoz;
+// }
+
+// var satr = "Salom dunyo. Sog'liqni saqlang. O'zbek tili";
+// var uzunSoz = getMaxOfString(satr);
+
+// console.log("Eng uzun so'z:", uzunSoz);
+
+
+
+
+// String 25
+
+
+// let satr = "cbz chuscy ycuzyejbj cbuzyjm jbcuzye"
+
+// let s = satr.replaceAll(" ", ".")
+
+// console.log(s);
+
+
+
+
+// String26
+
+
+
+
+
+// function birinchiHarfiniKattaQil(str) {
+//     var sozlar = str.split(" ");
+
+//     for (var i = 0; i < sozlar.length; i++) {
+//         var soz = sozlar[i];
+
+//         if (soz !== "") {
+//             var birinchiHarf = soz[0].toUpperCase();
+//             var qolganHisoblanmaydi = soz.substring(1).toLowerCase();
+//             sozlar[i] = birinchiHarf + qolganHisoblanmaydi;
+//         }
+//     }
+
+//     return sozlar.join(" ");
+// }
+
+// var satr = "salom dunyo. bugun havo juda yaxshi";
+// var natija = birinchiHarfiniKattaQil(satr);
+
+// console.log("Yangi satr:", natija);
+
+
+
+
+
+// String 27
+
+
+
+
+// function tinishBelgilariSoniChiqar(str, marks) {
+//     var tinishBelgilarSoni = 0;
+
+//     for (var i = 0; i < str.length; i++) {
+//         var belgi = str[i];
+//         if (marks.includes(belgi)) {
+//             tinishBelgilarSoni++;
+//         }
+//     }
+
+//     return tinishBelgilarSoni;
+// }
+
+// var satr = "Salom, dunyo! Qandaydir savol? Yaxshi, Rahmat.";
+// var belgilar = [".", ",", ";", ":", "?", "!", "-", "'", '"', "(", ")"];
+
+// var soni = tinishBelgilariSoniChiqar(satr, belgilar);
+// console.log("Tinish belgilari soni:", soni);
+
+
+
+
+
+// String 28
+
+
+
+// function faylningNominiAniqlash(faylNom) {
+//     var qatlamalar = faylNom.split("/");
+
+//     var oxirgiQatlama = qatlamalar[qatlamalar.length - 1];
+
+//     var kengaytmaIndeksi = oxirgiQatlama.lastIndexOf(".");
+//     var kengaytma = kengaytmaIndeksi !== -1 ? oxirgiQatlama.substring(kengaytmaIndeksi + 1) : "";
+
+//     var kengaytmasizNom = kengaytmaIndeksi !== -1 ? oxirgiQatlama.substring(0, kengaytmaIndeksi) : oxirgiQatlama;
+
+//     return kengaytmasizNom;
+// }
+
+// var faylNom = "D:/Qudrat_c++/books/My_book.exe";
+// var faylNomKengaytmasiz = faylningNominiAniqlash(faylNom);
+// console.log("Kengaytmasiz fayl nomi:", faylNomKengaytmasiz);
+
+
+
+
+// String 29
+
+
+
+// function faylningKengaytmasiniAniqlash(faylNom) {
+//     var qatlamalar = faylNom.split("/");
+
+//     var oxirgiQatlama = qatlamalar[qatlamalar.length - 1];
+//     var kengaytmaIndeksi = oxirgiQatlama.lastIndexOf(".");
+//     var kengaytma = kengaytmaIndeksi !== -1 ? oxirgiQatlama.substring(kengaytmaIndeksi + 1) : "";
+
+//     return kengaytma;
+// }
+
+// var faylNom = "D:/Qudrat_c++/books/My_book.exe";
+// var kengaytma = faylningKengaytmasiniAniqlash(faylNom);
+// console.log("Fayl kengaytmasi:", kengaytma);
+
+
+
+
+// String 30
+
+
+
+
+// function oxirgiPapkaNominiAniqlash(faylNom) {
+//     var qatlamalar = faylNom.split("/");
+
+//     var oxirgiPapkaNom = qatlamalar[qatlamalar.length - 2];
+
+//     return oxirgiPapkaNom;
+// }
+
+// var faylNom = "D:/Qudrat_c++/books/My_book.exe";
+// var oxirgiPapka = oxirgiPapkaNominiAniqlash(faylNom);
+// console.log("Oxirgi papka nomi:", oxirgiPapka);
